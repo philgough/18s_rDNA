@@ -69,7 +69,7 @@ class Button
     strokeWeight(2);
     stroke(0);
     fill(360);
-    translate(width * 0.90, height * 0.50);
+    translate(_w * 0.90, _h * 0.50);
     ellipse(0, 0, d, d);
     noStroke();
     textFont(hintFont);
@@ -85,7 +85,7 @@ class Button
     strokeWeight(2);
     stroke(0);
     fill(360);
-    translate(width * 0.10, height * 0.50);
+    translate(_w * 0.10, _h * 0.50);
     ellipse(0, 0, d, d);
     noStroke();
     textFont(hintFont);
@@ -106,13 +106,13 @@ class Button
       // check if it is valid
       if (object.isValid)
       {
-        if (dist(object.handPosition.x, object.handPosition.y, width * .9, height * .5) < d/2)
+        if (dist(object.handPosition.x, object.handPosition.y, _w * .9, _h * .5) < d/2)
         {
 //          println("nextState, button, going from: " + _masterState);
 //          println("leap size: " + leapObject.size());
           nextState();
         } else {
-          if (dist(object.handPosition.x, object.handPosition.y, width * .1, height * .5) < d/2)
+          if (dist(object.handPosition.x, object.handPosition.y, _w * .1, _h * .5) < d/2)
           {
 //            println("lastState, button");
             lastState();

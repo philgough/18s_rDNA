@@ -20,23 +20,23 @@ void drawHandIcon()
         break;
 
       case 1:
-        image(hand1, numHands * imgSize, height  * .92 - imgSize, imgSize, imgSize);
+        image(hand1, numHands * imgSize, _h  * .92 - imgSize, imgSize, imgSize);
         break;
 
       case 2:
-        image(hand2, numHands * imgSize, height  * .92 - imgSize, imgSize, imgSize);
+        image(hand2, numHands * imgSize, _h  * .92 - imgSize, imgSize, imgSize);
         break;
 
       case 3:
-        image(hand3, numHands * imgSize, height  * .92 - imgSize, imgSize, imgSize);
+        image(hand3, numHands * imgSize, _h  * .92 - imgSize, imgSize, imgSize);
         break;
 
       case 4:
-        image(hand4, numHands * imgSize, height  * .92 - imgSize, imgSize, imgSize);
+        image(hand4, numHands * imgSize, _h  * .92 - imgSize, imgSize, imgSize);
         break;
 
       case 5:
-        image(hand5, numHands * imgSize, height  * .92 - imgSize, imgSize, imgSize);
+        image(hand5, numHands * imgSize, _h  * .92 - imgSize, imgSize, imgSize);
         break;
       } // end switch
     } // end if valid
@@ -57,7 +57,7 @@ int currentHint = 9001;
 //  if (currentHint > 10) {
 //    textFont(hintFont);
 //    fill(80);
-//    text(hint, 5, height * 0.99);
+//    text(hint, 5, _h * 0.99);
 //  }
 //}
 
@@ -75,6 +75,6 @@ void drawHint()
     {
       fill(50);
     }
-    text(hints[i], 5, height * 0.99 - 14 * i);  
+    text(hints[i], 5, _h * 0.99 - 14 * i);  
   }
 }

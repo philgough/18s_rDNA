@@ -63,6 +63,10 @@ String introScreen0a = "Scientists can examine the gene 18s rDNA";
 String introScreen0b = "to distinguish between these four different types of organisms";
 
 
+// ** Some changes for version 3 ** \\
+// instead of using width and height, user _w and _h, since we are adding the information dashboard
+int _w = 1920;
+int _h = 800;
 
 
 void startIntroScreen3()

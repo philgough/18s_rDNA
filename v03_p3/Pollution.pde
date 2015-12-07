@@ -95,7 +95,7 @@ class Pollution
     } // end for
     wasteShape.endShape(CLOSE);
 
-    finalYDestination = random(height);
+    finalYDestination = random(_h);
   }
 
 
@@ -154,10 +154,10 @@ class Pollution
           }
         } else 
         {
-          location.y += (height/2 - y) * 0.06;
+          location.y += (_h/2 - y) * 0.06;
         } // end if
       } // end for
-      if (location.x > width*.8)
+      if (location.x > _w*.8)
       {
         state++;
       }
@@ -242,7 +242,7 @@ class Pollution
 
 
 
-      if (location.x > width+area.max())
+      if (location.x > _w+area.max())
       {
         state++;
       }

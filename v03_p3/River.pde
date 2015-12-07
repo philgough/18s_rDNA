@@ -14,7 +14,7 @@ color riverColor;
 
 void riverSetup()
 {
-  // bg = createGraphics(width, height, OPENGL);
+  // bg = createGraphics(_w, _h, OPENGL);
   estuary = new River();
 
   // welcomeRiver = drawWelcomeRiver();
@@ -45,11 +45,11 @@ class River
     river.strokeWeight(20);
     river.strokeJoin(BEVEL);
     // river.noStroke();
-    river.curveVertex(0, height/2 - 40); // start point, just above halfway on LHS
-    for (float i = 0; i < width*.75; i+= 100)
+    river.curveVertex(0, _h/2 - 40); // start point, just above halfway on LHS
+    for (float i = 0; i < _w*.75; i+= 100)
     {
       // alternate between up and down
-      float yPos = height/2 - 90 + (sin(radians(i/2)) * 50) + (randomGaussian() * 10);
+      float yPos = _h/2 - 90 + (sin(radians(i/2)) * 50) + (randomGaussian() * 10);
       float xPos = i;
 
       river.fill(201 + random(6)-3, 91 + random(6)-3, 97 + random(6)-3);
@@ -60,17 +60,17 @@ class River
         return;
       } // end if
     } // end for loop
-    river.curveVertex(width * 0.7, 0);
-    river.curveVertex(width, 0);
+    river.curveVertex(_w * 0.7, 0);
+    river.curveVertex(_w, 0);
 
-    river.curveVertex(width, height);
-    river.curveVertex(width*0.7, height);
+    river.curveVertex(_w, _h);
+    river.curveVertex(_w*0.7, _h);
 
 
-    for (float i = width*.75; i > -100; i-= 100)
+    for (float i = _w*.75; i > -100; i-= 100)
     {
       // alternate between up and down
-      float yPos = height/2 + 90 + (sin(radians(i/2)) * 50) + (randomGaussian() * 10);
+      float yPos = _h/2 + 90 + (sin(radians(i/2)) * 50) + (randomGaussian() * 10);
       float xPos = i;
 
       river.fill(201 + random(6)-3, 91 + random(6)-3, 97 + random(6)-3);
@@ -79,7 +79,7 @@ class River
     } // end for loop
 
 
-    river.curveVertex(0, height/2 + 50);
+    river.curveVertex(0, _h/2 + 50);
 
     river.endShape();
   } // end constructor
@@ -143,11 +143,11 @@ class River
 //
 //  r.fill(riverColor);
 //
-//  // r.curveVertex(0, height * 0.65);
-//  r.curveVertex(0, height * 0.35);
-//  for (int i = 0; i < width*0.75; i+=100)
+//  // r.curveVertex(0, _h * 0.65);
+//  r.curveVertex(0, _h * 0.35);
+//  for (int i = 0; i < _w*0.75; i+=100)
 //  {
-//    r.curveVertex(i, height * 0.35 + height * 0.5 * sin(radians(i));
+//    r.curveVertex(i, _h * 0.35 + _h * 0.5 * sin(radians(i));
 //  } // end top row
 //
 //  r.endShape();

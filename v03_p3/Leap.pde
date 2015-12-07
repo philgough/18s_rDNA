@@ -325,8 +325,8 @@ void onFrame(final Controller controller)
 
       //println("extendedFingers: " + extendedFingers);
       // get the position of the hand as x & y
-      float x = width/2 + lerp(0, width, hand.stabilizedPalmPosition().getX()/300);
-      float y = 300 + lerp(height, 0, hand.stabilizedPalmPosition().getY()/200);
+      float x = _w/2 + lerp(0, _w, hand.stabilizedPalmPosition().getX()/300);
+      float y = 300 + lerp(_h, 0, hand.stabilizedPalmPosition().getY()/200);
 
       // check if the hand is the list already
       if (leapObject.containsKey(hand.id())) 

@@ -72,7 +72,7 @@ class Graph
   {
     location.set(tempLocation);
 
-    if (location.x + graphLength < width)
+    if (location.x + graphLength < _w)
     {
       graphEnd.set(location.x + graphLength, location.y);
     } else 

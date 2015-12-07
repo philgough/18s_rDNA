@@ -50,6 +50,7 @@ void draw()
 {
   drawSwitch(_masterState);
   drawHandIcon();
+  drawDashboard();
 }
 
 
@@ -112,16 +113,16 @@ void drawWelcome()
   background(360);
   textFont(bodyFont);
   fill(80);
-  text(welcomeText1, width/2 - textWidth(welcomeText1)/2, height * 0.1);
+  text(welcomeText1, _w/2 - textWidth(welcomeText1)/2, _h * 0.1);
 
   textFont(titleFont);
   fill(80);
-  text(welcomeTitle, width/2 - textWidth(welcomeTitle)/2, height/3);
+  text(welcomeTitle, _w/2 - textWidth(welcomeTitle)/2, _h/3);
 
-  // image(hand5Big, width/2, height * 0.6, 400, 400);
+  // image(hand5Big, _w/2, _h * 0.6, 400, 400);
 
   textFont(bodyFont);
-  text(welcomeText2, width/2 - textWidth(welcomeText2)/2, height * 0.85);
+  text(welcomeText2, _w/2 - textWidth(welcomeText2)/2, _h * 0.85);
 
   welcomeLeap();
   currentHint = 8008;
@@ -154,14 +155,14 @@ void drawIntroScreen_0()
   shape(estuary.river);
   textFont(bodyFont);
   fill(80); 
-  text(introScreen0a, width/2 - textWidth(introScreen0a)/2, height * 0.25);
-  text(introScreen0b, width/2 - textWidth(introScreen0b)/2, height * 0.75);
+  text(introScreen0a, _w/2 - textWidth(introScreen0a)/2, _h * 0.25);
+  text(introScreen0b, _w/2 - textWidth(introScreen0b)/2, _h * 0.75);
 
 
- organismsForWelcomeScreen(3, width * 0.44, height * .5, 0);
- organismsForWelcomeScreen(1, width * 0.48, height * .5, 0);
- organismsForWelcomeScreen(2, width * 0.52, height * .5, 0);
- organismsForWelcomeScreen(0, width * 0.56, height * .5, 0);
+ organismsForWelcomeScreen(3, _w * 0.44, _h * .5, 0);
+ organismsForWelcomeScreen(1, _w * 0.48, _h * .5, 0);
+ organismsForWelcomeScreen(2, _w * 0.52, _h * .5, 0);
+ organismsForWelcomeScreen(0, _w * 0.56, _h * .5, 0);
 
 
   if (millis() < (_introTimer + 3000))
@@ -194,12 +195,12 @@ void drawIntroScreen_1()
   shape(estuary.river);
   textFont(bodyFont);
   fill(80); 
-  text(introScreen1a, width/2 - textWidth(introScreen1a)/2, height * 0.25);
-  text(introScreen1b, width/2 - textWidth(introScreen1b)/2, height * 0.75);
+  text(introScreen1a, _w/2 - textWidth(introScreen1a)/2, _h * 0.25);
+  text(introScreen1b, _w/2 - textWidth(introScreen1b)/2, _h * 0.75);
 
 
-  organismsForWelcomeScreen(2, width/2 - screen1Shift, height * 0.52, screen1Shift);
-  organismsForWelcomeScreen(0, width/2 + screen1Shift, height * 0.48, screen1Shift);
+  organismsForWelcomeScreen(2, _w/2 - screen1Shift, _h * 0.52, screen1Shift);
+  organismsForWelcomeScreen(0, _w/2 + screen1Shift, _h * 0.48, screen1Shift);
 
 
   if (millis() > (_introTimer + 3000))
@@ -234,12 +235,12 @@ void drawIntroScreen_2()
   shape(estuary.river);
   textFont(bodyFont);
   fill(80); 
-  text(introScreen2a, width/2 - textWidth(introScreen2a)/2, height * 0.25);
-  text(introScreen2b, width/2 - textWidth(introScreen2b)/2, height * 0.75);
+  text(introScreen2a, _w/2 - textWidth(introScreen2a)/2, _h * 0.25);
+  text(introScreen2b, _w/2 - textWidth(introScreen2b)/2, _h * 0.75);
 
 
-  organismsForWelcomeScreen(1, width/2, height * 0.55, 360);
-  organismsForWelcomeScreen(3, width/2, height * 0.45, 0);
+  organismsForWelcomeScreen(1, _w/2, _h * 0.55, 360);
+  organismsForWelcomeScreen(3, _w/2, _h * 0.45, 0);
 
 
   if (millis() < (_introTimer + 3000))
@@ -274,8 +275,8 @@ void drawIntroScreen_3()
   drawPollution();
   textFont(bodyFont);
   fill(80); 
-  text(introScreen3a, width/2 - textWidth(introScreen3a)/2, height * 0.25);
-  text(introScreen3b, width/2 - textWidth(introScreen3b)/2, height * 0.75);
+  text(introScreen3a, _w/2 - textWidth(introScreen3a)/2, _h * 0.25);
+  text(introScreen3b, _w/2 - textWidth(introScreen3b)/2, _h * 0.75);
 
 
 
@@ -315,7 +316,7 @@ void fadeOut()
   } // end alpha check
   noStroke();
   fill(0, 0, 100, _fadeAlpha);
-  rect(width/2, height/2, width, height);
+  rect(_w/2, _h/2, _w, _h);
 } // end fadeOut
 
 void fadeIn()
@@ -342,7 +343,7 @@ void fadeIn()
   } // end alpha check
   noStroke();
   fill(0, 0, 100, _fadeAlpha);
-  rect(width/2, height/2, width, height);
+  rect(_w/2, _h/2, _w, _h);
 } // end fadeIn
 
 

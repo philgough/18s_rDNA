@@ -129,7 +129,7 @@ class Game
 
         tempIndividualCellLocation.set(location.x + x*cellSize, location.y + y*cellSize);
         // if estuary.insideRiver or off screen - don't need to test for tempIndividualLocation.x > width, since we can't get there anyway
-        if (estuary.insideRiver(tempIndividualCellLocation) || (tempIndividualCellLocation.y < 0 || tempIndividualCellLocation.y > height) || (tempIndividualCellLocation.x < 0)) // change this test!! 
+        if (estuary.insideRiver(tempIndividualCellLocation) || (tempIndividualCellLocation.y < 0 || tempIndividualCellLocation.y > _h) || (tempIndividualCellLocation.x < 0)) // change this test!! 
         {
           // don't display, not in a valid position
           state = 9001;
@@ -139,7 +139,7 @@ class Game
     } // end assigning cells dead or alive
 
       // ** check position above/below river, and set a sewer point based on that ** \\
-    if (location.y > height/2)
+    if (location.y > _h/2)
     {
       // below river
       sewerPoint.set(location.x + dimensions.x/2, location.y);
@@ -162,7 +162,7 @@ class Game
     } // end check for closest vertex
 
     //int i = 0;
-    if (sewerPoint.y < height/2)
+    if (sewerPoint.y < _h/2)
     {
       // above river
       while (estuary.insideRiver (sewerPoint)) 

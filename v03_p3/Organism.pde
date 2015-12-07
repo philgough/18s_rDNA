@@ -115,11 +115,11 @@ class Organism
 
   void finalOrganismSetup() {
 
-    if (location.x < 0.5 * width) {
+    if (location.x < 0.5 * _w) {
       pH = 6.8;
     } else {
-      if (location.x < 0.75 * width) {
-        pH = 8.4 - location.x/(0.75 * width);
+      if (location.x < 0.75 * _w) {
+        pH = 8.4 - location.x/(0.75 * _w);
       } else {
         pH = 8.4;
       }
