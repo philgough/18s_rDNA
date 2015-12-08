@@ -15,7 +15,8 @@
 void setup()   
 {
   // General Config
-  size(1920, 1280, P2D);
+  //size(1920, 1280, P2D);
+  fullScreen(P2D);
   pixelDensity(2);
   hint(DISABLE_DEPTH_TEST); // avoids z-fighting
 
@@ -39,10 +40,11 @@ void setup()
   dataSetup();
   graphSetup();
   buttonSetup();
+  dashboardSetup();
   println("setup complete");
  
   // set frame position
-  frame.setLocation(1920, 150);
+  //frame.setLocation(1920, 150);
 } // end setup
 
 
